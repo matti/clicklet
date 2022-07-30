@@ -50,6 +50,7 @@
   }
 
   document.addEventListener("click", (e) => {
+    e.preventDefault()
     console.log("target", e.target)
     if (e.target.id == "__clickletConsole") return
 
@@ -92,7 +93,5 @@
     page__clickletPixel.style.left = e.pageX - 1 + "px";
     page__clickletPixel.style.top = e.pageY - 1 + "px";
     document.body.appendChild(page__clickletPixel)
-
-    e.preventDefault()
   })
 })();
