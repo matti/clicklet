@@ -51,6 +51,9 @@
 
   document.addEventListener("click", (e) => {
     e.preventDefault()
+    e.stopImmediatePropagation()
+    e.stopPropagation()
+
     console.log("target", e.target)
     if (e.target.id == "__clickletConsole") return
 
